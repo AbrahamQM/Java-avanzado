@@ -1,0 +1,3 @@
+eléctrico,tesla,T,1255FGS,2015,false,75,10
+híbrido,Toyota,Prius,8566FLT,2019,false,30,6,Gasolina,30,10
+combustión,Skoda,Octavia,7421CMD,2007,false,25,6,Gasoil
