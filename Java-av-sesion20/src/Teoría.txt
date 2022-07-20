@@ -1,0 +1,35 @@
+************************Arquitectura limpia:
+Cuando hablamos de Clean Architecture normalmente se utilizan 4 capas o etapas:
+1º capa coge la petición (Entry points)
+2º capa, procesa la petición
+3º Proveedores de datos.
+
+- Entidades: es la que está más arriba
+*define la capa de negocio: servicios, modelos de datos, gestión de cachés, ...
+EJ:Coche
+- Casos de uso (lógica o reglas de la aplicación)
+EJ:ListarCoches()
+- Controladores
+Ej:DameTodosLosCoches()
+- Frameworks and Drivers, Lo demás: (Interfaces adaptadoras "no las interfaces de java" funciones que implementan acciones)
+
+*************************Principios SOLID:
+S = Single Responsibility Principle (SRP)
+
+O = Open/Closed Principle (OCP)
+(Las entidades tienen que estar abiertas a la hora de responder, pero cerradas a la hora de modificarlas)
+
+L = Liskov Substitution Principle (LSP)
+Principio de sustitución (Una clase se tiene que poder sustituir Y, si falla, es que se está violando el principio)
+
+I – Interface Segregation Principle (ISP)
+Una clase no debe depender de una interfaz que no va a utilizar:
+La clase solo debe implementar la interfaz o interfaces que sean coherentes con su clase,
+*Ej. Un perro no implementaría una interfaz que incluya el método volar. Lo ideal sería una interfaz que implemente
+métodos generales para animales, otra que implemente métodos (animales voladores), otra (animales que naden), ...
+
+D – Dependency Inversion Principle (DIP)
+Las dependencias se tienen que abstraer
+Un módulo de alto nivel no debe depender de un módulo de bajo nivel.
+(Vamos a intentar implementar métodos abstractos de forma genérica en lugar de acceder a
+ un método concreto de la clase hija)
